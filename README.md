@@ -1,6 +1,4 @@
 # final-project-weather-informer
-final-project-weather-informer created by GitHub Classroom
-
 ***Our Design***
 
 A weather informer that takes current weather info from the web and send SMS to the user.
