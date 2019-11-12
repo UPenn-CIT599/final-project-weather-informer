@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
 public class UserInteractor {
-	public static void main(String[] args) {
-
+	
+	public static String getZipcodeFromUser() {
+		
 		Scanner userIn = new Scanner(System.in);
 		String zipCode; // 5 digit zipCode
 		
@@ -18,6 +19,7 @@ public class UserInteractor {
 		} while (zipCode.length() != 5);
 		System.out.println("Thank you! We will soon send you a weather update for " + zipCode);
 		userIn.close();
+		return zipCode;
 	}
 	
 }
