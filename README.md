@@ -18,10 +18,10 @@ A weather informer that takes current weather info from the web and send SMS to 
 7. What was the highest temperature experienced in the city in 2018? <br />
 8. What was the lowest temperature experienced in the city in 2018? <br />
 9. Standard deviation of the temperature in 2018.<br />
-•Display it on console
-•Ask the user if they want information to be sent to them over an email (and maybe just the Clothing recommendation on a text (SMS) message)
-•Ask them to enter a phone number/email address. (phone no. restricted to the US numbers);
-•Use an available  email API (https://www.mailjet.com/email-api/) / SMS text messaging API(https://www.twilio.com/docs/sms/quickstart/java) to send the information to the user.
+•Display it on console<br />
+•Ask the user if they want information to be sent to them over an email (and maybe just the Clothing recommendation on a text (SMS) message)<br />
+•Ask them to enter a phone number/email address. (phone no. restricted to the US numbers)<br />
+•Use an available  email API (https://www.mailjet.com/email-api/) / SMS text messaging API(https://www.twilio.com/docs/sms/quickstart/java) to send the information to the user.<br />
 
 **We are planning to make the following classes to perform the tasks listed above:**<br />
 (A: Attributes, M: Methods, CC: Coupled Classes)<br />
