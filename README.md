@@ -7,7 +7,7 @@ A weather informer that takes current weather info from the web and send SMS to 
 • Ask the user to enter a city name for which he/she wants weather information. (Weather information provided will be based on the historical data and current weather information.)<br />
 • Use it to query a freely available weather API (https://openweathermap.org/current) on the internet to retrieve current weather information.<br />
 • Format data received. (Data from weather API will be in JSON format and historical data is in CSV format). Extract necessary information to display it on the user console<br />
-Historical weather data is retrieved from CSV file (obtained from https://rp5.ru/Weather_in_the_world)
+• Historical weather data is retrieved from CSV file (obtained from https://rp5.ru/Weather_in_the_world)
 • The weather information will address following queries-<br />
 1. Clothing recommendation based on current weather<br />
 2. Current temperature > x% days in 2018<br />
