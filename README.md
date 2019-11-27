@@ -21,7 +21,7 @@ A weather informer that takes current weather info from the web and send SMS to 
 •Display it on console<br />
 •Ask the user if they want information to be sent to them over an email (and maybe just the Clothing recommendation on a text (SMS) message)<br />
 •Ask them to enter a phone number/email address. (phone no. restricted to the US numbers)<br />
-•Use an available  email API (https://www.mailjet.com/email-api/) / SMS text messaging API(https://www.twilio.com/docs/sms/quickstart/java) to send the information to the user.<br />
+•Use an available  email API (https://www.mailjet.com/email-api/) to send the information to the user.<br />
 
 **We are planning to make the following classes to perform the tasks listed above:**<br />
 (A: Attributes, M: Methods, CC: Coupled Classes)<br />
