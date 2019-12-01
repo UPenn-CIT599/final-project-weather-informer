@@ -20,9 +20,11 @@ public class WeatherInformerRunner {
 
 		System.out.println("The temperature of " + formatter.format(kelvin) + "\u00B0K is equivalent to " + formatter.format(fahrenheit) + "\u00B0F" +"\n");
 		
-		//Returns Zipcode entered by user
+		//Returns Zipcode entered by the user
 		
 		String Zipcode = UserInteractor.getZipcodeFromUser();
+		
+		String emailAddress = UserInteractor.getEmailAddressFromUser();
 	}
 
 	
