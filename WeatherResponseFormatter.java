@@ -1,3 +1,5 @@
+package query_weather;
+
 
 public class WeatherResponseFormatter {
 
@@ -11,3 +13,5 @@ public class WeatherResponseFormatter {
 
 
 }
+
+

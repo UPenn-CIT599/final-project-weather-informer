@@ -1,3 +1,5 @@
+package query_weather;
+
 import java.text.DecimalFormat;
 
 public class WeatherInformerRunner {
