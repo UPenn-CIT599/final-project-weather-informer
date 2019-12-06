@@ -1,12 +1,13 @@
-package query_weather;
+package FinalProject.FinalProject;
+
 import java.io.*;
 import java.util.ArrayList;
 
 public class DataAnalysis {
 	
-	public static ArrayList<Float> arr_temp = new ArrayList<>();
-    public static ArrayList<Float> arr_cloud = new ArrayList<>();
-    public static ArrayList<Float> arr_hum = new ArrayList<>();
+	public static ArrayList<Float> arr_temp = new ArrayList<Float>();
+    public static ArrayList<Float> arr_cloud = new ArrayList<Float>();
+    public static ArrayList<Float> arr_hum = new ArrayList<Float>();
 
     public DataAnalysis(String filename) throws IOException {
         FileInputStream inputStream = new FileInputStream(filename);
@@ -40,4 +41,3 @@ public class DataAnalysis {
         }
     }
 }
-

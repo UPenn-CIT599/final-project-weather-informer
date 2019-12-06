@@ -1,9 +1,10 @@
-package query_weather;
+package FinalProject.FinalProject;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Map.Entry;
+
 
 public class UserInteractor {
 	
@@ -25,19 +26,24 @@ public class UserInteractor {
 		System.out.println("Thank you! We will soon send you a weather update for " + zipCode);
 		WeatherApiClient newQuery = new WeatherApiClient(zipCode);
 		String myResponse = newQuery.getWeatherResponse();
-		System.out.println(myResponse);
-		FormattedResponse i = new FormattedResponse();
+		WeatherResponseFormatter i = new WeatherResponseFormatter();
 		HashMap<String, Object> hm = i.getFormattedResponse(myResponse);
-		// print entries in formatted response
+		//print entries in formatted response
+		/*
 		for (Entry<String, Object> mapElement: hm.entrySet()) { 
             String key = (String)mapElement.getKey(); 
             Object value = mapElement.getValue(); 
             System.out.println(key + " : " + value); 
         }
+        */
+		String currentWeather = i.getPrettyPrintStr();
+		System.out.println(currentWeather);
+		
+		String cityname = (String)hm.get("cityname");
 		ClothingRecommender cR = new ClothingRecommender();
-	    String clothRecommendation = cR.cloth((Float)hm.get("temp"));
+	    String clothRecommendation = cR.recommend_clothes_by_temp((Float)hm.get("temp"));
 	    System.out.println(clothRecommendation);
-	    String ifUmbrella = cR.cloth((String)hm.get("main"));
+	    String ifUmbrella = cR.recommend_by_rain((String)hm.get("main"));
 	    
 	    System.out.println(ifUmbrella);
 		String output ="";//only one interface to next person 
@@ -95,12 +101,13 @@ public class UserInteractor {
 	        //std
 	        Double std = compartion.standartD(dataAnylsis.arr_temp);
 	        //System.out.println(std);
-	        String cityname = (String)hm.get("cityname");
 	        output = output + clothRecommendation +" " +ifUmbrella + "\n"+
-	                "Today's temperature in " + cityname.replace("\"", "") + " is warmer than "+ largetThanTemp*100+"% of the days in "+ selectedcity + " in 2018." + "\n"+ "Today is more humid than "+ largetThanHum*100+"% days in 2018."+
-	                "\n"+"today is less "+ lessThanCloud*100+"% cloudy than 2018." + "\n" + "The highest temperature of last year is "+
-	                maxTemp+"K"+ "\n" + "The lowest temperature of last year is "+ minTemp +"K"+  "\n" + "The standard deviation " +
-	                "temperature of last year is "+ std;
+	                "Today's temperature in " + cityname.replace("\"", "") + " is higher than "+ largetThanTemp*100+"% of the days in "+ selectedcity + " in 2018." + "\n"+ 
+	        		"Today's humidity in " + cityname.replace("\"", "") + " is lower than "+ largetThanHum*100+"% of the days in " + selectedcity +" in 2018."+ "\n"+
+	                "Today's cloud cover in " + cityname.replace("\"", "") + " is less than "+ lessThanCloud*100+"% of the days the days in " + selectedcity + " in 2018." + "\n" + 
+	        		"The highest temperature of last year in "+ selectedcity + " is " + maxTemp+"K."+ "\n" +
+	                "The lowest temperature of last year in " + selectedcity + " is "+ minTemp +"K."+  "\n" + 
+	        		"The standard deviation of temperature last year in " + selectedcity + " is "+ std + "K.";
 
 	        System.out.println(output);
 		} catch (IOException e) {
@@ -112,3 +119,4 @@ public class UserInteractor {
 	}
 	
 }
+

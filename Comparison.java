@@ -1,4 +1,5 @@
-package query_weather;
+package FinalProject.FinalProject;
+
 import java.util.ArrayList;
 
 public class Comparison {
@@ -82,3 +83,4 @@ public class Comparison {
     }
 
 }
+

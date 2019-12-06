@@ -1,11 +1,15 @@
-package query_weather;
+package FinalProject.FinalProject;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.HashMap;
 import java.util.Scanner;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 public class WeatherApiClient {
 	/**
@@ -24,7 +28,7 @@ public class WeatherApiClient {
 	String id;
 	String url;
 	
-	WeatherApiClient(String zipcode) {
+	public WeatherApiClient(String zipcode) {
 		query = zipcode+",us";
 		id = "4aa745966231c7801a54adb9e7e815d4";
 		url = "http://api.openweathermap.org/data/2.5/weather?"+"appid="+id+"&zip="+query;
@@ -53,4 +57,6 @@ public class WeatherApiClient {
 		}
 		return responseBody;
 	}
+	
 }
+
