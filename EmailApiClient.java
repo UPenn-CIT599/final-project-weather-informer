@@ -8,8 +8,6 @@ import com.mailjet.client.MailjetResponse;
 import com.mailjet.client.ClientOptions;
 import com.mailjet.client.resource.Emailv31;
 
-import java.util.HashMap;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -43,7 +41,11 @@ public class EmailApiClient {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		if (response.getStatus() == 200) {
+			System.out.println("Great! We were successful in sending you an email with the weather information!");
+		}
 		System.out.println(response.getStatus());
 		System.out.println(response.getData());
 	}
 }
+
