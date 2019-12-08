@@ -1,7 +1,52 @@
 # final-project-weather-informer
-***Our Design***
 
-A weather informer that takes current weather info from the web and send SMS to the user.
+***A weather informer that takes current weather info from the web and send SMS to the user.***
+
+
+***How to run our program*** <br />
+
+Steps to make it work at your end, see below
+
+1. Create a new Maven Project
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/1.png)
+
+2. Make sure to select 'Create a simple project'
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/2.png)
+
+3. Write 'finalproject' as Group Id and Artifact Id
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/3.png)
+
+4. In src/main/java, create a package named 'finalproject'.
+
+5. In pom.xml file add the dependencies below
+```
+<dependencies>
+		<dependency>
+			<groupId>com.mailjet</groupId>
+			<artifactId>mailjet-client</artifactId>
+			<version>4.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.6</version>
+		</dependency>
+	</dependencies>
+```
+Your pom.xml file should look like this
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/4.png)
+
+6. If you tun the WeatherInformerRunner, you should get output in this form and email will be sent to the address entered by you.
+
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/5.png)
+
+***Our Design***
 
 **Workflow** <br />
 • Ask the user to enter a city name for which he/she wants the weather information. (Weather information provided will be based on the historical data and current weather information.)<br />
