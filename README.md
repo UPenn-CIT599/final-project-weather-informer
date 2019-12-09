@@ -1,96 +1,68 @@
 # final-project-weather-informer
 
-***A weather informer that takes current weather info from the web and send SMS to the user.***
+***A weather informer that takes current weather info from the web and sends meaningful data analysis report to the user.***
 
 
 ***How to run our program*** <br />
 
 Steps to make it work at your end, see below
 
-1. Create a new Maven Project
+Step 1. Create a new Maven Project
+
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/1.png)
 
-2. Make sure to select 'Create a simple project'
+Step 2. Make sure to select 'Create a simple project'
+
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/2.png)
 
-3. Write 'finalproject' as Group Id and Artifact Id
+Step 3. Write 'finalproject' as Group Id and Artifact Id
+
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/3.png)
 
-4. In src/main/java, create a package named 'finalproject'.
+Step 4. Step 4: Create a new java package in the Maven folder you just created and name it 'finalproject.finalproject'
 
-5. In pom.xml file add the dependencies below
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_4.png)
+
+Step 5. Make sure that all the files from GitHub are copied in the package 'finalproject.finalproject' (including the csv files!)
+
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_5.png)
+
+Step 6. Open the reference_pom.xml file in the package and copy the highlighted dependencies.
+
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_6.png)
+
 ```
 <dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version> <!-- Or whatever JUnit you're using. -->
+		</dependency>
 		<dependency>
 			<groupId>com.mailjet</groupId>
 			<artifactId>mailjet-client</artifactId>
 			<version>4.2.0</version>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
-			<version>2.8.6</version>
+			<version>2.8.5</version>
 		</dependency>
 	</dependencies>
 ```
-Your pom.xml file should look like this
-![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/4.png)
 
-6. If you tun the WeatherInformerRunner, you should get output in this form and email will be sent to the address entered by you.
+Step 7. Open the pom.xml file created in Maven java project.
 
-![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/5.png)
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_7.png)
 
-***Our Design***
+Step 8. Paste dependencies copied from reference_pom.xml to pom.xml file. Your pom.xml file should look as shown below.
 
-**Workflow** <br />
-• Ask the user to enter a city name for which he/she wants the weather information. (Weather information provided will be based on the historical data and current weather information.)<br />
-• Use it to query a freely available weather API (https://openweathermap.org/current) on the internet to retrieve current weather information.<br />
-• Format data received. (Data from weather API will be in JSON format and historical data is in CSV format). Extract necessary information to display it on the user console<br />
-• Historical weather data is retrieved from CSV file (obtained from https://rp5.ru/Weather_in_the_world)
-• The weather information will address following queries-<br />
-1. Clothing recommendation based on current weather<br />
-2. Current temperature > x% days in 2018<br />
-3. Difference between high and low > y% days in 2018<br />
-4. Current humidity > z% days in 2018<br />
-5. Current cloud cover < k% days in 2018<br />
-6. Find the date/city with the most similar weather (by temp, humidity, cloud cover)<br />
-7. What was the highest temperature experienced in the city in 2018? <br />
-8. What was the lowest temperature experienced in the city in 2018? <br />
-9. Standard deviation of the temperature in 2018.<br />
-•Display it on console<br />
-•Ask the user if they want information to be sent to them over an email (and maybe just the Clothing recommendation on a text (SMS) message)<br />
-•Ask them to enter a phone number/email address. (phone no. restricted to the US numbers)<br />
-•Use an available  email API (https://www.mailjet.com/email-api/) to send the information to the user.<br />
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_8.png)
 
-**We are planning to make the following classes to perform the tasks listed above:**<br />
-(A: Attributes, M: Methods, CC: Coupled Classes)<br />
-•	**WeatherInformerRunner**<br />
-A: UserInteractor<br />
-M: run(), main()<br />
-CC: UserInteractor<br />
+Step 9 Once you SAVE the pom.xml file, your code will compile.
 
-•	**UserInteractor**<br />
-A: WeatherAPIClient, SMSAPIClient<br />
-M: getZipcodeFromUser(), getPhoneNumFromUser()<br />
-CC: WeatherAPIClient, SMSAPIClient<br />
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_9.png)
 
-•	**WeatherResponseFormatter**<br />
-A: WeatherAPIClient<br />
-M: convertToFahrenheit(), convertToCelsius()<br />
-CC: WeatherAPIClient<br />
+Step 10. Open WeatherInformerRunner class and run the program! Weather Informer is now all ready to help you! :)
 
-•	**WeatherAPIClient**<br />
-A: WeatherResponse<br />
-M: getWeatherFromAPI(), connectToWeatherAPI()<br />
-CC: webWeatherAPI<br />
-
-•	**SMSAPIClient**<br />
-A: SMSMessage, phoneNum <br />
-M: sendSMS(), connectToSMSAPI()<br />
-CC: webSMSAPI<br />
+![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_10.png)
