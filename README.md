@@ -18,7 +18,7 @@ Step 3. Write 'finalproject' as Group Id and Artifact Id
 
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/3.png)
 
-Step 4. Step 4: Create a new java package in the Maven folder you just created and name it 'finalproject.finalproject'
+Step 4. Create a new java package in the Maven folder you just created and name it 'finalproject.finalproject'
 
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_4.png)
 
