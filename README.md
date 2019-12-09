@@ -15,7 +15,7 @@ __How to run our program__</br>
 
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/2.png)
 
-**Step 3:** Write 'finalproject' as Group Id and Artifact Id
+**Step 3:** Write 'finalproject' as name of Group Id and Artifact Id both
 
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/3.png)
 
