@@ -58,7 +58,7 @@ Step 8. Paste dependencies copied from reference_pom.xml to pom.xml file. Your p
 
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_8.png)
 
-Step 9 Once you SAVE the pom.xml file, your code will compile.
+Step 9. Once you SAVE the pom.xml file, your code will compile.
 
 ![](https://github.com/UPenn-CIT599/final-project-weather-informer/blob/master/images/step_9.png)
 
