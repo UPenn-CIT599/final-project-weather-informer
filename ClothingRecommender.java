@@ -1,25 +1,40 @@
-package FinalProject.FinalProject;
+package finalproject.finalproject;
 
+/**
+ * Recommends clothing given temperature and rain possibilities.
+ */
 public class ClothingRecommender {
 
-    public String recommendClothesByTemp(Float temp){
-        String wear ="";
-        if(temp>293){
-             wear = "It is going to be warm today. Wearing a T-shirt would be good.";
-        }else if(temp<=293 && temp> 283){
-             wear= "It is not going to be very cold today. Wearing a hoodie would be good.";
-        }else{
-             wear ="It is going to be cold today. Wearing a jacket would be good.";
-        }
-        return wear;
-    }
-    
-    public String recommendByRain(String main){
-        if(main.equals("Rain")){
-            return "Bring an umbrella! It is going to be rainy today.";
-        }else{
-            return "No need to bring a umbrella! It is a sunny today :)";
-        }
-    }
+	/**
+	 * Returns a string telling what clothing to choose depending on the input temperature.
+	 *
+	 * @param temp current temperature
+	 * @return recommendation string
+	 */
+	public String recommendClothesByTemp(Float temp) {
+		String wear = "";
+		if (temp > 293) {
+			wear = "\nLooks like it's warm right now. Wearing a T-shirt should be fine.";
+		} else if (temp <= 293 && temp > 283) {
+			wear = "\nLooks like it isn't very cold right now. Wearing a hoodie should be fine.";
+		} else {
+			wear = "\nLooks like it's cold right now. We recommend wearing a jacket.";
+		}
+		return wear;
+	}
+
+	/**
+	 * Returns a recommendation string as to whether to carry an umbrella or not.
+	 *
+	 * @param rain whether it's raining or not
+	 * @return recommendation string
+	 */
+	public String recommendByRain(String rain) {
+		if (rain.equals("Rain")) {
+			return "\nDon't forget to take an umbrella! Looks like it might rain.";
+		} else {
+			return "\nNo need to take an umbrella! Rain isn't expected at the moment. :)\n";
+		}
+	}
 
 }

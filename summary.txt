@@ -1,0 +1,67 @@
+****WeatherInformer Project****
+
+***Summary***
+WeatherInformer, as the name suggests, informs you of the weather related data. 
+Here's what it does -
+
+--It asks you for a zip code that it uses to query OpenWeatherMap API in real time using JSON.
+--It then parses that response and retrieves the relevant information such as temperature, humidity,
+  and cloud cover.
+--Based on these results, it gives clothing recommendations pertaining to cold and rain.
+--It then presents you with a choice of 5 cities for which we have downloaded weather data for 
+  the last year. On selecting a city, it does complex data analysis and gives insights into how
+  your city compares with this selected city in terms of weather.
+--Lastly, it asks the user to enter their email address. The program uses MailJet API service
+  to send an email to the user with all the weather information mentioned above.
+
+
+***GitHub link***
+
+https://github.com/UPenn-CIT599/final-project-weather-informer
+
+
+**Weishen**
+Wrote the data analysis class to retrieve and format weather history data in 2018 in csv files for five cities
+
+Wrote the clothing and umbrella recommender to provide the clothing recommendation based on the current weather
+
+Wrote the comparison class to address the following queries regrading the comparison between the current weather and history weather data
+ 1. Current temperature > x% days in 2018
+ 2. Difference between high and low > y% days in 2018
+ 3. Current humidity > z% days in 2018
+ 4. Current cloud cover < k% days in 2018
+ 5. What was the highest temperature experienced in the city in 2018? 
+ 6. What was the lowest temperature experienced in the city in 2018? 
+ 7. Standard deviation of the temperature in 2018.
+
+Wrote 11 tests for comparison class and clothing and umbrella recommender
+
+
+**Chloe**
+Wrote the WeatherApiClient class to retrieve current weather information from API
+
+Wrote the BackendInteractor class to interface the WeatherApiClient, EmailApiClient, DataAnalysis, Comparison, and ClothingRecommender to perform backend tasks
+
+Wrote String formatting methods in the WeatherResponseFormatter to format the output of the backend classes to desired strings
+
+Wrote runner method in UserInteractor to interface UserInteractor methods with backend functionalities
+
+Wrote 1 test for weatherApiClient class
+
+Updated README with Shruti
+
+
+**Shruti**
+Wrote the EmailApiClient class to send the weather information via email using MailJet Email API.
+
+Wrote WeatherInformerRunner class that interacts with other classes and gets things done.
+
+Wrote the UserInteractor class to accept input from the user, format responses, and generate output.
+
+Wrote UserInteractor to interface UserInteractor methods with backend functionalities
+
+Wrote 3 tests for WeatherResponseFormatter and UserInteractor.
+
+Reorganized/re-factored the code to adhere to Java style conventions and principles of Cohesion and Coupling.
+
+Updated README with Chloe
