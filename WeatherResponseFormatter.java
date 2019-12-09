@@ -106,7 +106,7 @@ public class WeatherResponseFormatter {
 				userSelectedCity, maxTempC);
 		String lowestTemp = String.format("\nThe lowest temperature in %s over the past year was %.1f Celsius.",
 				userSelectedCity, minTempC);
-		String stdDev = String.format("\nThe standard deviation of temperature last year in %s was %.1f Kelvin",
+		String stdDev = String.format("\nThe standard deviation of temperature last year in %s was %.1f Celsius.",
 				userSelectedCity, std);
 
 		return temperature + humidity + cloudCover + highestTemp + lowestTemp + stdDev;

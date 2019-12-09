@@ -48,6 +48,8 @@ public class DataAnalysis {
 				System.exit(1);
 			}
 		} catch (FileNotFoundException e) {
+			System.out.println("Trying to read file from location - " + System.getProperty("user.dir")
+					+ "/src/main/java/finalproject/finalproject/" + filename);
 			System.out.println("Could not find file. Make sure the filepath is correct. Exiting.");
 			System.exit(1);
 		}
