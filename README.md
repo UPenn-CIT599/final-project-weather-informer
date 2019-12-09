@@ -1,9 +1,10 @@
 # final-project-weather-informer
 
-***A weather informer that takes current weather info from the web and sends meaningful data analysis report to the user.***
+***A weather informer that takes current weather info from the web and sends meaningful data analysis report to the user.*** </br>
 
 
-<u>**How to run our program**</u> <br />
+
+__How to run our program__</br>
 
 
 **Step 1:** Create a new Maven Project
