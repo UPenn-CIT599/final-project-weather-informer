@@ -5,7 +5,6 @@
 
 ***How to run our program*** <br />
 
-Steps to make it work at your end, see below
 
 Step 1. Create a new Maven Project
 
