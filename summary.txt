@@ -4,12 +4,12 @@
 WeatherInformer, as the name suggests, informs you of the weather related data. 
 Here's what it does -
 
---It asks you for a zip code that it uses to query OpenWeatherMap API in real time using JSON.
+--It asks you for a zip code in the USA that it uses to query OpenWeatherMap API in real time using JSON.
 --It then parses that response and retrieves the relevant information such as temperature, humidity,
   and cloud cover.
 --Based on these results, it gives clothing recommendations pertaining to cold and rain.
---It then presents you with a choice of 5 cities for which we have downloaded weather data for 
-  the last year. On selecting a city, it does complex data analysis and gives insights into how
+--It then presents you with a choice of 5 cities for which we have downloaded containing weather data for 
+  the last year for 5 cities in the USA. On selecting a city, it does complex data analysis and gives insights into how
   your city compares with this selected city in terms of weather.
 --Lastly, it asks the user to enter their email address. The program uses MailJet API service
   to send an email to the user with all the weather information mentioned above.
