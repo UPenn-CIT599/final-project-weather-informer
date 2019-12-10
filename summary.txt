@@ -19,6 +19,7 @@ Here's what it does -
 
 https://github.com/UPenn-CIT599/final-project-weather-informer
 
+***Work Breakdown***
 
 **Weishen**
 Wrote the data analysis class to retrieve and format weather history data in 2018 in csv files for five cities
